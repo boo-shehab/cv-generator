@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Register from './screens/register/Register';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
 import UserInfo from './screens/userInfo/UserInfo';
 import DashboardScreen from './screens/dashboardScreen/DashboardScreen';
 import MainLayout from './layout/MainLayout';
@@ -29,6 +29,7 @@ function App() {
     },
     {
       element: <MainLayout />,
+      errorElement: <Link to='/'>link</Link>,
       children: [
         {
           path: "/",
@@ -38,6 +39,7 @@ function App() {
             // </ProtectedRoute>
             
           ),
+          errorElement: <Link to='/'>link</Link>
         },
         {
           path: "/profile",
