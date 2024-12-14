@@ -67,14 +67,15 @@ function App() {
         },
       ],
     },
+    {
+      path: "*",
+      element: <Link to="/register">go to home</Link>
+    }
   ]);
   return (
     <>
       <RouterProvider router={router} />
-        
-
-     
-</>
+     </>
   )
 }
 
